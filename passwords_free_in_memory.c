@@ -20,7 +20,7 @@
 
 //     // Check password...
 
-//     free(password);
+//     free(password); // password is still in memory and can be reallocated by other processes!
 // }
 
 
