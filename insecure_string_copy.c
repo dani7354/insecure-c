@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
     strncpy(buf, argv[1], BUFSIZE - 1); // Use strncpy to prevent buffer overflow
     printf("String: %.*s\n", BUFSIZE, buf); // Limit output to BUFSIZE
-    printf("String length: %d\n", strlen(buf));
+    printf("String length: %zu\n", strlen(buf));
 
     return 0;
 }

@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     strncpy(password, argv[1], PASSWORD_SIZE - 1);
 
     printf("Password address: %p\n", &password);
-    printf("Entered password: %.*s \n", sizeof(password), password);
+    printf("Entered password: %s \n", password);
 
     // Check password...
 
