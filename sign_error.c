@@ -24,11 +24,13 @@
 
 int main(int argc, char *argv[])
 {
-    unsigned int len;  // Use unsigned int for length
+    (void) argc;
+
+    size_t len;  // Use unsigned int for length
     char buf[BUFSIZE];
 
-    len = atoi(argv[1]);
-    printf("Length of data %d\n", len);
+    len = strtoull(argv[1], NULL, 10);
+    printf("Length of data %zu\n", len);
 
     if (len < BUFSIZE)
     {

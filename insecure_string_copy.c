@@ -16,9 +16,12 @@
 
 int main(int argc, char *argv[])
 {
+    (void) argc; // Unused variable. Prevents compiler warnings.
+
     char buf[BUFSIZE];
 
-    strncpy(buf, argv[1], BUFSIZE - 1); // Use strncpy to prevent buffer overflow
+    size_t maxBytesToCopy = sizeof(buf) - 1; // Reserve space for null terminator
+    strncpy(buf, argv[1], maxBytesToCopy); // Use strncpy to prevent buffer overflow
     printf("String: %.*s\n", BUFSIZE, buf); // Limit output to BUFSIZE
     printf("String length: %zu\n", strlen(buf));
 

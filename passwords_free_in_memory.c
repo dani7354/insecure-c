@@ -26,19 +26,22 @@
 
 int main(int argc, char *argv[])
 {
-    char *password = malloc(PASSWORD_SIZE);
+    (void) argc;
+
+    size_t passwordBufferSize = PASSWORD_SIZE;
+    char *password = malloc(passwordBufferSize);
     if (password == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
         return 1;
     }
 
-    strncpy(password, argv[1], PASSWORD_SIZE - 1);
+    size_t maxBytesToCopy = passwordBufferSize - 1; // Reserve space for null terminator
+    strncpy(password, argv[1], maxBytesToCopy);
 
-    printf("Password address: %p\n", &password);
     printf("Entered password: %s \n", password);
 
     // Check password...
 
-    memset(password, 0, PASSWORD_SIZE); // Clear the password from memory
+    memset(password, 0, passwordBufferSize); // Clear the password from memory
     free(password);
 }
