@@ -15,6 +15,8 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+
 
 int main(){
 	long val=0x41414141;

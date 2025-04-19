@@ -21,13 +21,9 @@ passwords_free_in_memory: passwords_free_in_memory.c
 sign_error: sign_error.c
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/sign_error sign_error.c
 
-narnia0: narnia0.c
-	$(CC) $(CFLAGS) -o $(BIN_DIR)/narnia0 narnia0.c
-
 clean:
 	rm -f $(BIN_DIR)/buffer_overflow
 	rm -f $(BIN_DIR)/insecure_string_copy
 	rm -f $(BIN_DIR)/integer_overflow
 	rm -f $(BIN_DIR)/passwords_free_in_memory
 	rm -f $(BIN_DIR)/sign_error
-	rm -f $(BIN_DIR)/narnia0
