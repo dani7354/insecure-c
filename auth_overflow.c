@@ -18,7 +18,6 @@ int check_authentication(char *password)
     return auth_flag;
 }
 
-
 int main(int argc, char *argv[])
 {
     if (argc != 2)
