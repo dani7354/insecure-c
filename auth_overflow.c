@@ -15,7 +15,6 @@ int check_authentication(char *password)
 
     printf("auth_flag: %d\n", auth_flag);
 
-
     return auth_flag;
 }
 
